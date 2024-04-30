@@ -28,12 +28,6 @@ const createMovieElement = (movie) => {
         <p>${movie.overview}</p>
         <p class="movie-rating">Rating: ${movie.vote_average}</p>
       </div>`;
-  movieElement.addEventListener("mouseenter", () => {
-    movieElement.classList.add("hovered");
-  });
-  movieElement.addEventListener("mouseleave", () => {
-    movieElement.classList.remove("hovered");
-  });
   movieElement.addEventListener("click", () => {
     alert(
       `Movie Name: ${movie.title}\nMovie ID: ${movie.id}\nRating: ${movie.vote_average}`
