@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Netflix Sans";
+  font-weight: 300;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff)
+      format("woff");
+}
+.netflix-sans-font-loaded {
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: Netflix sans;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  padding: 0 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.title {
+  font-size: 40px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  color: lightgrey;
+  background-color: #333;
+}
+
+.title h1 {
+  margin: 0px;
+}
+
+#search-button {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: help;
+  color: lightgray;
+  background-color: #333;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+#search-input {
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  width: 300px;
+  color: lightgray;
+  background-color: #333;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+#movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.movie {
+  position: relative;
+  border: 1px solid lightgray;
+  margin: 5px;
+  padding: 0;
+  width: 300px;
+  height: auto;
+  background-color: #333;
+  border-radius: 8px;
+  outline: 0.5px solid lightgray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie:hover img {
+  filter: brightness(30%);
+}
+
+.movie .movie-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  color: lightgray;
+  text-align: center;
+  display: none;
+  z-index: 1;
+  font-size: 14px;
+}
+
+.movie:hover .movie-content {
+  display: block;
+}
+
+.movie .movie-rating {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  color: lightgray;
+  text-align: center;
+  display: none;
+  z-index: 1;
+  font-size: 14px;
+}
+
+.movie:hover .movie-rating {
+  display: block;
+}
