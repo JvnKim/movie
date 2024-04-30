@@ -11,12 +11,16 @@
   font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+:root {
+  --back-black: #333;
+  --highlight-color: lightgrey;
+}
+
 body {
-  font-family: Netflix sans;
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #333;
   padding: 0 20px;
+  background-color: var(--back-black);
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -25,21 +29,20 @@ body {
   margin: auto;
   padding: 10px;
   text-align: center;
-  color: lightgrey;
-  background-color: #333;
+  color: var(--highlight-color);
+  background-color: var(--back-black);
 }
 
 .title h1 {
-  margin: 0px;
+  margin: 0;
 }
 
 #search-button {
   padding: 10px 20px;
   font-size: 15px;
-  cursor: help;
-  color: lightgray;
-  background-color: #333;
-  border: 1px solid lightgray;
+  color: var(--highlight-color);
+  background-color: var(--back-black);
+  border: 1px solid var(--highlight-color);
   border-radius: 8px;
 }
 
@@ -48,9 +51,9 @@ body {
   padding: 10px;
   font-size: 15px;
   width: 300px;
-  color: lightgray;
-  background-color: #333;
-  border: 1px solid lightgray;
+  color: var(--highlight-color);
+  background-color: var(--back-black);
+  border: 1px solid var(--highlight-color);
   border-radius: 8px;
 }
 
@@ -63,15 +66,15 @@ body {
 
 .movie {
   position: relative;
-  border: 1px solid lightgray;
+  border: 1px solid var(--highlight-color);
   margin: 5px;
   padding: 0;
   width: 300px;
   height: auto;
-  background-color: #333;
+  background-color: var(--back-black);
   border-radius: 8px;
-  outline: 0.5px solid lightgray;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: 0.5px solid var(--highlight-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -95,11 +98,17 @@ body {
   padding: 10px;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  color: lightgray;
+  color: var(--highlight-color);
   text-align: center;
   display: none;
   z-index: 1;
   font-size: 14px;
+}
+
+.movie .movie-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .movie:hover .movie-content {
@@ -114,7 +123,7 @@ body {
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
-  color: lightgray;
+  color: var(--highlight-color);
   text-align: center;
   display: none;
   z-index: 1;
